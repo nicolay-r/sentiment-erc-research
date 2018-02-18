@@ -4,11 +4,11 @@ Description
 This project is a collection of researches related to sentiment **e**ntity
 **r**elation **c**lassification.
 Given a mass media russian news articles and list of marked named entities in
-it, we may predict a sentiment attitudes -- relation between entities.  Each
+it, we may predict a sentiment attitudes -- relation between entities. Each
 attitude could be classified as follows: positive, negative, or neutral.
-Having a train and test collections of inosmi.ru news as a part of 'data.zip'
-collection, we might applly and compare a different (feature based) machine
-learning approaches, such as svm, nb, rf, knn.
+Having a train and test collections of **inosmi.ru** news as a part of
+'data.zip' collection, we might applly and compare a different (feature based)
+machine learning approaches, such as svm, nb, rf, knn.
 
 Being applyed for unlabeled articles (test collections), we interested only in
 non neutral attitudes. As a result, we extract positive and negative attitudes
@@ -20,8 +20,9 @@ Dataset
 Installation
 ------------
 
-Using virtualenv. Create virtual environment, suppose `my_env`, and then craete
-and activete it as follows:
+Using [virtualenv](https://www.pythoncentral.io/how-to-install-virtualenv-python/).
+Create virtual environment, suppose `my_env`, and then create and activete it
+as follows:
 ```
 virtualenv my_env
 source my_env/bin/activate
