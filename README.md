@@ -6,9 +6,9 @@ This project is a collection of researches related to sentiment **e**ntity
 Given a mass media russian news articles and list of marked named entities in
 it, we may predict a sentiment attitudes -- relation between entities. Each
 attitude could be classified as follows: positive, negative, or neutral.
-Having a train and test collections of **inosmi.ru** news as a part of
-'data.zip' collection, we might applly and compare a different (feature based)
-machine learning approaches, such as svm, nb, rf, knn.
+Having a train and test collections of [inosmi.ru](https://inosmi.ru) news as a
+part of 'data.zip' collection, we might applly and compare a different (feature
+based) machine learning approaches, such as svm, nb, rf, knn.
 
 Being applyed for unlabeled articles (test collections), we interested only in
 non neutral attitudes. As a result, we extract positive and negative attitudes
@@ -17,15 +17,14 @@ and discard neutrals.
 Dataset
 -------
 
-Dataset data presented by `data.zip` archieve. It includes test and train
-collections. Each collection consist of mass media articles written in russian.
-Each news has list of annotated entites (`*.annot.txt`), and original text.
-Additionaly, train collection also includes a list of sentiment (non neutral)
-attitudes per each news (`*.opin.txt`). Therefore, each attitude has a `pos` or
-`neg` label.
+Presented by `data.zip` archieve. It includes test and train collections. Each
+collection consist of mass media articles written in russian. Each news has
+list of annotated entites (`*.annot.txt`), and original text. Additionaly,
+train collection also includes a list of sentiment (non neutral) attitudes per
+each news (`*.opin.txt`). Therefore, each attitude has a `pos` or `neg` label.
 
 To overcome the issue of multiple name of the same entity (i.e. for example,
-[`сша`, `соединенные штаты`], ['рф', 'россия']), dataset also includes list of
+[`сша`, `соединенные штаты`], [`рф`, `россия`]), dataset also includes list of
 synonyms that might be used for news of both collections.
 
 Additional files that become useful for feature values producing are also
