@@ -17,7 +17,7 @@ and discard neutrals.
 Dataset
 -------
 
-Presented by `data.zip` archieve. It includes test and train collections. Each
+Presented by `data.zip` archive. It includes test and train collections. Each
 collection consist of mass media articles written in russian. Each news has
 list of annotated entites (`*.annot.txt`), and original text. Additionaly,
 train collection also includes a list of sentiment (non neutral) attitudes per
@@ -28,7 +28,7 @@ To overcome the issue of multiple name of the same entity (i.e. for example,
 synonyms that might be used for news of both collections.
 
 Additional files that become useful for feature values producing are also
-included in dataset archieve.
+included in dataset archive.
 
 Installation
 ------------
