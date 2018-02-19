@@ -34,22 +34,22 @@ Installation
 ------------
 
 Using [virtualenv](https://www.pythoncentral.io/how-to-install-virtualenv-python/).
-Create virtual environment, suppose `my_env`, and then create and activete it
-as follows:
+Create virtual environment, suppose `my_env`, and activate it as follows:
 ```
 virtualenv my_env
 source my_env/bin/activate
 ```
 
-Use `Makefile` to install necessary dependencies and unpack `data.zip` dataset:
+Use `Makefile` to install [core](https://github.com/nicolay-r/sentiment-erc-core) 
+library and unpack `data.zip` dataset:
 ```
 make install
 ```
 
 We use word2vec model which were taken from
 [rusvectores](http://rusvectores.org/static/models/rusvectores2/),
-Because of some features that depends on words embedding vocabulary, it is
-necessary to additionally download a model, as follows:
+Because of some features that depends on word embedding vocabulary, it is
+necessary to additionally download a model as follows:
 ```
 make download_model
 ```
@@ -64,7 +64,7 @@ For extraction of positive and negative attitudes we additionally introduce
 (extract from news) **neutral attudes** to distinguish really sentiment
 attitudes from neutral in further.
 
-We compose a list of neutral relations per each news of train an test
+At first, we compose a list of neutral relations per each news of train an test
 collection by running:
 ```
 ./neutrals.py
