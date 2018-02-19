@@ -2,7 +2,7 @@ install:
 	# Download and install core library python dependencies
 	git clone https://github.com/nicolay-r/sentiment-erc-core core
 	cd core && git checkout dialog_2018
-	make -C core/Makefile
+	pip install -r core/dependencies.txt
 	# Unpack data
 	unzip data.zip
 

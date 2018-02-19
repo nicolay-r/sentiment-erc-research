@@ -17,6 +17,20 @@ and discard neutrals.
 Dataset
 -------
 
+Dataset data presented by `data.zip` archieve. It includes test and train
+collections. Each collection consist of mass media articles written in russian.
+Each news has list of annotated entites (`*.annot.txt`), and original text.
+Additionaly, train collection also includes a list of sentiment (non neutral)
+attitudes per each news (`*.opin.txt`). Therefore, each attitude has a `pos` or
+`neg` label.
+
+To overcome the issue of multiple name of the same entity (i.e. for example,
+[`сша`, `соединенные штаты`], ['рф', 'россия']), dataset also includes list of
+synonyms that might be used for news of both collections.
+
+Additional files that become useful for feature values producing are also
+included in dataset archieve.
+
 Installation
 ------------
 
@@ -40,6 +54,8 @@ necessary to additionally download a model, as follows:
 ```
 make download_model
 ```
+*Note:* This word embedding model stores a russian terms with additional POS
+suffix written in [mystem notation](https://tech.yandex.ru/mystem/doc/grammemes-values-docpage/).
 
 Usage
 -----
