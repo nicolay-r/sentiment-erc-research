@@ -30,6 +30,17 @@ synonyms that might be used for news of both collections.
 Additional files that become useful for feature values producing are also
 included in dataset archive.
 
+Results presented in table below (in comparison with baseline neg/pos/distr methods)
+
+| Model               | Precision | Recall   | F1(P,N)  |
+|--------------------:|:---------:|:--------:|:--------:|
+|Baseline neg         |  0.03     | 0.39     | 0.05     |
+|Baseline pos         |  0.02     | 0.40     | 0.04     |
+|Baseline distr       |  0.05     | 0.23     | 0.08     |
+|KNN                  |  0.18     | 0.06     | 0.09     |
+|SVM (GRID)           |  0.09     | **0.36** | 0.15     |
+|Random forest (GRID) |  **0.41** | 0.21     | **0.27** |
+
 Installation
 ------------
 
