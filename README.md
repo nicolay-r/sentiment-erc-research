@@ -4,13 +4,12 @@ Description
 ![](https://img.shields.io/badge/Scikit-learn-0.19.1-yellowgreen.svg)
 
 This project is a collection of researches related to **sentiment attitudes
-extraction**.  Given a mass media russian news articles and list of marked
+extraction**. Given a mass media russian news articles and list of marked
 named entities in it, we may predict a sentiment attitudes -- pos/neg relations
-between entities.  Each attitude could be classified as follows: positive,
-negative, or neutral.  Having a train and test collections of
-[inosmi.ru](https://inosmi.ru) news as a part of 'data.zip' collection, we
-might applly and compare a different (feature based) machine learning
-approaches, such as svm, nb, rf, knn.
+between entities. Each attitude could be classified as follows: positive,
+negative, or neutral. Having RuSentRel collection, we apply and compare a
+different (feature based) machine learning approaches, such as svm, nb, rf,
+knn.
 
 Being applyed for unlabeled articles (test collections), we interested only in
 non neutral attitudes. As a result, we extract positive and negative attitudes
