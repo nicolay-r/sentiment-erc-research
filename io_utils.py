@@ -63,11 +63,11 @@ def data_root():
 
 
 def test_root():
-    return path.join(data_root(), "Test/")
+    return path.join(data_root(), "test/")
 
 
 def train_root():
-    return path.join(data_root(), "Texts/")
+    return path.join(data_root(), "train/")
 
 
 def eval_root():
@@ -137,7 +137,7 @@ def get_test_vectors_list():
 
 
 def get_etalon_root():
-    return path.join(data_root(), "Etalon/")
+    return path.join(data_root(), "etalon/")
 
 
 def get_synonyms_filepath():

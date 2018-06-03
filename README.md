@@ -1,14 +1,16 @@
 Description
 -----------
+![](https://img.shields.io/badge/Python-2.7-brightgreen.svg)
+![](https://img.shields.io/badge/Scikit-learn-0.19.1-yellowgreen.svg)
 
-This project is a collection of researches related to sentiment **e**ntity
-**r**elation **c**lassification.
-Given a mass media russian news articles and list of marked named entities in
-it, we may predict a sentiment attitudes -- relation between entities. Each
-attitude could be classified as follows: positive, negative, or neutral.
-Having a train and test collections of [inosmi.ru](https://inosmi.ru) news as a
-part of 'data.zip' collection, we might applly and compare a different (feature
-based) machine learning approaches, such as svm, nb, rf, knn.
+This project is a collection of researches related to **sentiment attitudes
+extraction**.  Given a mass media russian news articles and list of marked
+named entities in it, we may predict a sentiment attitudes -- pos/neg relations
+between entities.  Each attitude could be classified as follows: positive,
+negative, or neutral.  Having a train and test collections of
+[inosmi.ru](https://inosmi.ru) news as a part of 'data.zip' collection, we
+might applly and compare a different (feature based) machine learning
+approaches, such as svm, nb, rf, knn.
 
 Being applyed for unlabeled articles (test collections), we interested only in
 non neutral attitudes. As a result, we extract positive and negative attitudes
@@ -17,20 +19,15 @@ and discard neutrals.
 Dataset
 -------
 
-Presented by `data.zip` archive. It includes test and train collections. Each
-collection consist of mass media articles written in russian. Each news has
-list of annotated entites (`*.annot.txt`), and original text. Additionaly,
-train collection also includes a list of sentiment (non neutral) attitudes per
-each news (`*.opin.txt`). Therefore, each attitude has a `pos` or `neg` label.
+We use [RuSentRel 1.0](https://github.com/nicolay-r/RuSentRel/tree/v1.0/)
+corpus consisted of analytical articles from Internet-portal
+inosmi.ru.
 
-To overcome the issue of multiple name of the same entity (i.e. for example,
-[`сша`, `соединенные штаты`], [`рф`, `россия`]), dataset also includes list of
-synonyms that might be used for news of both collections.
 
-Additional files that become useful for feature values producing are also
-included in dataset archive.
+Results
+-------
 
-Results presented in table below (in comparison with baseline neg/pos/distr methods)
+Presented in table below (in comparison with baseline neg/pos/distr methods)
 
 | Model               | Precision | Recall   | F1(P,N)  |
 |--------------------:|:---------:|:--------:|:--------:|
@@ -51,8 +48,9 @@ virtualenv my_env
 source my_env/bin/activate
 ```
 
-Use `Makefile` to install [core](https://github.com/nicolay-r/sentiment-erc-core) 
-library and unpack `data.zip` dataset:
+Use `Makefile` to install [core](https://github.com/nicolay-r/sentiment-erc-core)
+library and download [RuSentRel 1.0](https://github.com/nicolay-r/RuSentRel/tree/v1.0/)
+dataset:
 ```
 make install
 ```
