@@ -7,7 +7,7 @@ from gensim.models.word2vec import Word2Vec
 
 import core.env as env
 
-from core.source.lexicon import Lexicon, RelationLexicon
+from core.source.lexicon import Lexicon
 from core.source.opinion import OpinionCollection
 from core.source.entity import EntityCollection
 from core.source.news import News
@@ -20,12 +20,12 @@ from classifiers.features.distance import DistanceFeature
 from classifiers.features.similarity import SimilarityFeature
 from classifiers.features.lexicon import LexiconFeature
 from classifiers.features.pattern import PatternFeature
-from classifiers.features import EntitiesBetweenFeature
-from classifiers.features import EntityTagFeature
-from classifiers.features import EntitySemanticClass
+from classifiers.features.entities import EntitiesBetweenFeature
+from classifiers.features.entities import EntityTagFeature
+from classifiers.features.entities import EntitySemanticClass
 from classifiers.features.prepositions import PrepositionsCountFeature
-from classifiers.features import EntitiesFrequency
-from classifiers.features import EntityAppearanceFeature
+from classifiers.features.frequency import EntitiesFrequency
+from classifiers.features.appearance import EntityAppearanceFeature
 from classifiers.features.context import ContextFeature
 
 from core.processing.prefix import SentimentPrefixProcessor
@@ -149,10 +149,8 @@ capitals_list = io_utils.read_lss("data/capitals.lss")
 states_list = io_utils.read_lss("data/states.lss")
 synonyms = SynonymsCollection.from_file(io_utils.get_synonyms_filepath())
 lexicon = Lexicon.from_file("data/rusentilex.csv")
-external_lexicon = RelationLexicon.from_file("data/External/inosmi.rlex")
 
 FEATURES = [
-    # ExternalRelationsFeature(external_lexicon, synonyms),
     DistanceFeature(),
     SimilarityFeature(w2v_model),
     LexiconFeature(lexicon, prefix_processor),
