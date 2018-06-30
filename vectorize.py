@@ -16,18 +16,17 @@ from core.source.synonyms import SynonymsCollection
 
 from core.relations import Relation
 
-from core.features.distance import DistanceFeature
-from core.features.similarity import SimilarityFeature
-from core.features.lexicon import LexiconFeature
-from core.features.pattern import PatternFeature
-from core.features.entities import EntitiesBetweenFeature
-from core.features.entities import EntityTagFeature
-from core.features.entities import EntitySemanticClass
-from core.features.prepositions import PrepositionsCountFeature
-from core.features.frequency import EntitiesFrequency
-from core.features.appearance import EntityAppearanceFeature
-from core.features.context import ContextFeature
-from core.features.external import ExternalRelationsFeature
+from classifiers.features.distance import DistanceFeature
+from classifiers.features.similarity import SimilarityFeature
+from classifiers.features.lexicon import LexiconFeature
+from classifiers.features.pattern import PatternFeature
+from classifiers.features import EntitiesBetweenFeature
+from classifiers.features import EntityTagFeature
+from classifiers.features import EntitySemanticClass
+from classifiers.features.prepositions import PrepositionsCountFeature
+from classifiers.features import EntitiesFrequency
+from classifiers.features import EntityAppearanceFeature
+from classifiers.features.context import ContextFeature
 
 from core.processing.prefix import SentimentPrefixProcessor
 

@@ -6,11 +6,9 @@ from core.statistic import FilesToCompare
 ignored_entity_values = [u"author", u"unknown"]
 
 
-def get_server_root():
-    return '/home/nicolay/storage/disk/homes/nicolay/datasets/news'
-
 def get_w2v_model_filepath():
     return 'data/w2v_model.bin.gz'
+
 
 def read_prepositions(filepath):
     prepositions = []
