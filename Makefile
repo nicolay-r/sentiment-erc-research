@@ -1,7 +1,8 @@
 install:
-	# Download and install core library python dependencies
-	git clone https://github.com/nicolay-r/sentiment-erc-core core
-	cd core && git checkout dialog_2018
+	# Download and install AREkit core library with python dependencies
+	git clone git@github.com:nicolay-r/AREkit.git core
+	# Switching to the branch with the related experiments
+	cd core && git checkout 0.18.1-dialog-rc
 	git clone https://github.com/nicolay-r/RuSentRel temp
 	mv temp/ data/
 	cd data && git checkout v1.0
